@@ -7,6 +7,8 @@ body {
 }
 
 header {
+    color: #0d1b2a;
+    font-family: 'Times New Roman', Times, serif; 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -70,6 +72,8 @@ header {
     flex-direction: column;
     justify-content: center;
     margin-left: 90px;
+    font-family: 'Times New Roman', Times, serif ;
+   
     
 }
 
@@ -123,6 +127,7 @@ nav a {
 }
 
 section {
+    color: #032b55;
     font-family: 'Times New Roman', Times, serif; 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     background: white;
@@ -130,14 +135,13 @@ section {
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    color: #032b55;
 }
 
-
+/* Zoom-in effect on hover */
 section:hover {
     transform: scale(1.08);  /* Zoom in */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Optional: Shadow for emphasis */
-}
+  }
 
 #pic {
     background-color: #f4f4f4;
@@ -159,10 +163,10 @@ section:hover {
     object-fit: cover; /* Ensures the image covers the entire section */
     
 }
-
+ 
 button {
     padding: 10px 15px;
-    background-color: #1d3557;
+    background-color: #002e84;
     color: white;
     border: none;
     border-radius: 5px;
@@ -307,6 +311,9 @@ button {
 
 #contact {
     text-align: center; /* Center the heading and skill list */
+    font-size: 20px; 
+    color: #032b55;
+    margin: 0;
     
 
 }
@@ -335,7 +342,7 @@ button {
 }
 
 /* Style for the stars */
-.star {
+.stars {
     color: gold;
     font-size: 20px; /* Adjust star size */
 }
@@ -376,12 +383,80 @@ button {
     width: 50px; /* Adjust the size of the icon */
     height: 50px; /* Adjust the size of the icon */
 }
+
 header, .section {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+  }
   
   /* Hover effect */
-header:hover, .section:hover {
+  header:hover, .section:hover {
     transform: scale(1.02); /* Zooms in */
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2); /* Adds shadow for emphasis */
+  }
+
+  #projects {
+    text-align: center;
+    margin-top: 50px;
 }
+
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    margin-top: -10px;
+}
+
+/* Style the carousel container */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Style the individual project items */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project {
+    flex: 0 0 33.33%; /* Display 3 items in a row */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Style the navigation arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #002e84;
+    color: white;
+    padding: 10px;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.arrow:hover {
+    background-color: #032159
+}
+
