@@ -473,3 +473,145 @@ header, .section {
     background-color: #032159
 }
 
+/* Default styles are for larger screens (Desktops) */
+
+/* Tablets (width up to 1024px) */
+@media screen and (max-width: 1024px) {
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: center; /* Center everything */
+        transform: scale(1); /* Reset scaling */
+        gap: 20px; /* Increase spacing */
+    }
+
+    .header-left {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header-right {
+        text-align: center; /* Center text */
+        margin-left: 0;
+    }
+
+    .header-text {
+        margin-left: 0;
+    }
+
+    .header-text h2 {
+        font-size: 2.5em; /* Reduce title size */
+    }
+
+    .carousel-container {
+        width: 95%; /* Make carousel fit smaller screens */
+    }
+
+    .project {
+        flex: 0 0 50%; /* Show 2 projects per row */
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .skill-bar {
+        width: 70%; /* Make skill bars wider for better visibility */
+    }
+}
+
+/* Mobile (width up to 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .header-right h1 {
+        font-size: 2em; /* Reduce header title size */
+    }
+
+    .header-right p0,
+    .header-right p {
+        font-size: 1.2em;
+    }
+
+    .social-links {
+        flex-direction: row; /* Align social links horizontally */
+        gap: 10px;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .project {
+        flex: 0 0 100%; /* Show 1 project per row */
+    }
+
+    .skill-bar {
+        width: 90%;
+    }
+
+    .hobbies-container,
+    .languages-container {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .hobby-item {
+        width: 120px; /* Adjust hobby item width */
+    }
+
+    .arrow {
+        font-size: 1.5em; /* Reduce arrow size */
+        padding: 8px;
+    }
+}
+
+/* Mobile (width up to 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    .header-right h1 {
+        font-size: 1.8em;
+    }
+
+    .header-right p0,
+    .header-right p {
+        font-size: 1em;
+    }
+
+    .header-text h2 {
+        font-size: 2em;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .project {
+        flex: 0 0 100%;
+    }
+
+    .social-logo {
+        width: 30px; /* Reduce icon size */
+        height: 30px;
+    }
+
+    .button {
+        padding: 8px 12px;
+    }
+
+    .skill-bar {
+        width: 100%;
+    }
+
+    .arrow {
+        font-size: 1.2em;
+        padding: 6px;
+    }
+}
