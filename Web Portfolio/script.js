@@ -23,6 +23,7 @@ const skills = [
 ];
 
 // Function to generate the skill bars dynamically
+// Function to generate the skill bars dynamically
 function displaySkills() {
     const skillList = document.getElementById('skill-list');
     
@@ -56,8 +57,10 @@ function getColorForSkill(value) {
     return '#a6e1fa';
 }
 
+
 // Call the function to display skills when the page loads
 window.onload = displaySkills;
+
 
 // Sample languages data with names and values (percentage)
 const languages = [
@@ -154,21 +157,49 @@ window.onload = function() {
     displayLanguages(); // Assuming displayLanguages() is already defined for languages
     displayHobbies(); // Display hobbies
 };
-let currentSlide = 0;
 
-function moveSlide(direction) {
-    const carousel = document.querySelector('.carousel');
-    const totalProjects = document.querySelectorAll('.project').length;
 
-    currentSlide += direction;
 
-    // Ensure the slide wraps around when reaching the end or beginning
-    if (currentSlide < 0) {
-        currentSlide = totalProjects - 3; // Wrap around to last set
-    } else if (currentSlide >= totalProjects - 2) {
-        currentSlide = 0; // Wrap around to first set
+const carousel = document.querySelector('.carousel');
+const projects = document.querySelectorAll('.project');
+const totalProjects = projects.length;
+let index = 0;
+
+function showNextSlide() {
+    index++;
+    if (index >= totalProjects-2) {
+        index = 0; // Reset index to loop
     }
-
-    // Move the carousel by shifting it horizontally
-    carousel.style.transform = `translateX(-${currentSlide * (100 / 3)}%)`;
+    updateCarousel();
 }
+
+function showPrevSlide() {
+    index--;
+    if (index < 0) {
+        index = totalProjects - 1; // Go back to the last slide
+    }
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const projectWidth = projects[0].clientWidth; // Get the width of one project
+    carousel.style.transform = `translateX(-${index * projectWidth}px)`;
+}
+
+let autoSlide = setInterval(showNextSlide, 4000); // Start auto-slide
+
+function resetAutoSlide() {
+    clearInterval(autoSlide); // Stop auto-slide
+    autoSlide = setInterval(showNextSlide, 105000); // Restart after 8s of inactivity
+}
+
+// Event Listeners for Buttons
+document.querySelector('.arrow.left').addEventListener('click', () => {
+    showPrevSlide();
+    resetAutoSlide(); // Restart auto-slide timer
+});
+
+document.querySelector('.arrow.right').addEventListener('click', () => {
+    showNextSlide();
+    resetAutoSlide(); // Restart auto-slide timer
+});

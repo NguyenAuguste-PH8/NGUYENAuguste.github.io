@@ -82,7 +82,7 @@ header {
     margin-top: 10px;
     font-size: 2.8em;
     font-family: 'Times New Roman', Times, serif ;
-    color: #032b55;
+    color: #07315e;
 }
 
 .header-right p0{
@@ -128,7 +128,7 @@ nav a {
 }
 
 section {
-    color: #032b55;
+    color: #07315e;
     font-family: 'Times New Roman', Times, serif; 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     background: white;
@@ -284,7 +284,7 @@ button {
     text-align: center; /* Center the heading and skill list */
     margin-bottom: 20px; /* Add some space below the skill list */
     font-size: 24px; 
-    color: #032b55;
+    color: #07315e;
 }
 
 /* Style for the image container */
@@ -299,6 +299,7 @@ button {
     width: 100%; /* Ensure the image fills its container */
     max-width: 300px; /* Limit the width of the image */
     height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 5px;
 }
 
 #skill-list {
@@ -313,7 +314,7 @@ button {
 #contact {
     text-align: center; /* Center the heading and skill list */
     font-size: 20px; 
-    color: #032b55;
+    color: #07315e;
     margin: 0;
     
 
@@ -323,7 +324,7 @@ button {
     text-align: center; /* Center the heading and language list */
     margin-top: 10px; /* Space above the language section */
     font-size: 25px; 
-    color: #032b55;
+    color: #07315e;
 }
 
 /* Style for the language list */
@@ -397,13 +398,14 @@ header, .section {
 
   #projects {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 #projects h2 {
     font-size: 2em;
     margin-bottom: 40px;
     margin-top: -10px;
+    color: #07315e;
 }
 
 /* Style the carousel container */
@@ -412,8 +414,8 @@ header, .section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    overflow: hidden;
+    width: 85%;
+    
     margin: 0 auto;
 }
 
@@ -427,12 +429,22 @@ header, .section {
     flex: 0 0 33.33%; /* Display 3 items in a row */
     padding: 10px;
     box-sizing: border-box;
+    margin-bottom: -100px;
+    
 }
 
 .project img {
-    width: 100%;
-    height: auto;
+    width: 75%;
+    height: 70%;
     border-radius: 8px;
+}
+.project a {
+    color: #006195; /* Change to your desired color */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+.project a:hover {
+    color: #01295e; /* Optional: Change color on hover */
 }
 
 /* Style the navigation arrows */
