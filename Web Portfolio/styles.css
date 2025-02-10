@@ -137,6 +137,25 @@ section:hover {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Optional: Shadow for emphasis */
 }
 
+#pic {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section */
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    margin-bottom: -20px;
+    margin-top: -18px;
+}
+#pic img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section */
+    
+}
 
 button {
     padding: 10px 15px;
