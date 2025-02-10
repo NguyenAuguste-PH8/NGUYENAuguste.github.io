@@ -16,6 +16,7 @@ const skills = [
     { name: "Dash", value: 30 },
     { name: "Powershell", value:  35},
     { name: "Azure", value:  30},
+    { name: "AWS", value:  22},
     { name: "Microsoft365", value:  85},
     { name: "Automation", value:  60},
     { name: "Docker", value:  33}
