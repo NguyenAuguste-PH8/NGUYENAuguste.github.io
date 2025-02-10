@@ -13,7 +13,10 @@ const skills = [
     { name: "CSS", value: 73 },
     { name: "Python", value: 93 },
     { name: "Dash", value: 30 },
-    { name: "Powershell", value:  35}
+    { name: "Powershell", value:  35},
+    { name: "Azure", value:  30},
+    { name: "Microsoft365", value:  85},
+    { name: "Automation", value:  60}
 ];
 
 // Function to generate the skill bars dynamically
