@@ -473,38 +473,54 @@ header, .section {
     background-color: #032159
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 768px) {
     body {
-        font-size: 16px; /* Bigger default font size */
-        padding: 0;
+        font-size: 16px; /* Adjust font size to be larger and more readable */
         margin: 0;
-        width: 30%;
+        padding: 0;
+        width: 100vw;
         overflow-x: hidden;
     }
 
     header {
-        width: 100vw;
-        
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px;
         text-align: center;
-        padding: 10px;
+        width: 100%;
+        max-width: 100vw;
+        gap: 10px;
     }
- 
+
+    .header-left {
+        margin: 0;
+        text-align: center;
+    }
 
     .header-left img {
-        width: 150px; /* Scale image up */
+        width: 120px; /* Scale image properly */
         height: auto;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+    .social-links,
+    .social-links2 {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
     }
 
     .header-right {
-        width: 90%;
+        margin-left: 0;
+        font-size: 1.2em; /* Adjust text size for mobile */
+        text-align: center;
     }
 
     .header-right h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .header-right p {
@@ -512,51 +528,114 @@ header, .section {
     }
 
     section {
-        width: 100vw;
-        min-height: 100vh; /* Each section fills the whole screen */
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section:hover {
+        transform: scale(1);  /* Keep hover zoom effect */
+    }
+
+    #pic {
+        width: 100%;
+        height: 40vh; /* Adjust image container size */
+    }
+
+    #pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-container {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
         padding: 20px;
+    }
+
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .project {
+        flex: 0 0 80%; /* Adjust project size for mobile */
+        margin-bottom: 20px;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .arrow {
+        font-size: 2em;
+        z-index: 100;
     }
 
     .skills-container,
     .languages-container,
     .hobbies-container {
-        width: 100%;
+        font-size: 18px;
         text-align: center;
-        font-size: 22px; /* Larger text for readability */
+        padding: 20px 10px;
     }
 
-    .carousel-container {
-        width: 100vw;
-        min-height: 100vh; /* Fill the whole screen */
+    .skill-bar {
+        width: 80%;
+        margin: 10px auto;
     }
 
-    .carousel {
-        display: flex;
-        flex-direction: column;
+    .skill-bar span {
+        font-size: 14px;
+    }
+
+    .hobby-item {
+        width: 40%; /* Make each hobby item take up more width */
+        margin: 10px 5px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #f0f0f0;
+    }
+
+    .language-skill {
+        font-size: 1em;
+    }
+
+    .image-container img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    /* Additional adjustments for the toolbar */
+    .above-header {
+        flex-direction: column; /* Stack elements vertically */
         align-items: center;
-        width: 100%;
-        height: 100%;
+        gap: 10px;
     }
 
-    .project {
-        width: 90vw;
+    /* Adjust logo size for mobile */
+    .logo {
+        width: 120px;
         height: auto;
-        text-align: center;
     }
 
-    .project img {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .arrow {
-        font-size: 2em; /* Bigger arrows for easy navigation */
+    /* Adjust button style */
+    button, #cvbutton {
+        padding: 10px 20px;
+        font-size: 1em;
+        width: 90%; /* Make button fill screen */
     }
 }
-
-
 
