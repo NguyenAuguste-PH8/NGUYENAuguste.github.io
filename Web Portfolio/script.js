@@ -8,12 +8,12 @@ function showContact() {
 
 // Sample skills data with names and values (percentage)
 const skills = [
-    { name: "JavaScript", value: 65 },
-    { name: "HTML", value: 60 },
-    { name: "CSS", value: 60 },
-    { name: "Python", value: 85 },
-    { name: "Dash", value: 20 },
-    { name: "Powershell", value:  25}
+    { name: "JavaScript", value: 72 },
+    { name: "HTML", value: 68 },
+    { name: "CSS", value: 73 },
+    { name: "Python", value: 93 },
+    { name: "Dash", value: 30 },
+    { name: "Powershell", value:  35}
 ];
 
 // Function to generate the skill bars dynamically
@@ -41,9 +41,9 @@ function displaySkills() {
 
 // Helper function to get a color based on the skill value
 function getColorForSkill(value) {
-    if (value >= 70) return '#03045e'; // Green for high skills
-    if (value >= 50) return '#1e336b'; // Yellow for medium skills
-    if (value >= 20) return '#465576';
+    if (value >= 80) return '#0a2472'; 
+    if (value >= 60) return '#023e8a'; 
+    if (value >= 20) return '#0077b6';
     return { color: '#465576', message: '- Just beginning to learn' }
 }
 
