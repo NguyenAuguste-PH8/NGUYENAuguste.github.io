@@ -485,7 +485,7 @@ header, .section {
         align-items: center; /* Center content */
         padding: 20px; /* Reduce padding */
         transform: scale(1); /* Ensure it fills the screen */
-        max-width: 100%;
+        width: 100%;
     }
 
     .header-left {
