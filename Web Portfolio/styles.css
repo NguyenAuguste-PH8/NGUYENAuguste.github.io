@@ -143,9 +143,10 @@ section:hover {
     height: 100%;
     object-fit: cover; /* Ensures the image covers the entire section */
     width: 100vw;
-    height: 25vh;
+    height: 30vh;
     display: flex;
     justify-content: center; /* Centers horizontally */
+    overflow: auto; /* Enables scrolling if content exceeds size */
     margin-bottom: -20px;
     margin-top: -18px;
 }
