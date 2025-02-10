@@ -479,9 +479,11 @@ header, .section {
 @media only screen and (max-width: 480px) {
     body {
         padding: 0;
+        width: 100%;
     }
 
     header {
+        width: 100%;
         padding: 15px;
     }
 
@@ -498,8 +500,8 @@ header, .section {
     }
 
     .social-logo {
-        width: 30px;
-        height: 30px;
+        width: 5%;
+        height: 5%;
     }
 
     .skill-bar {
