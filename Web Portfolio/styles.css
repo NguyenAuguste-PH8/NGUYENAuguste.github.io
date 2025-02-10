@@ -475,4 +475,45 @@ header, .section {
 .arrow:hover {
     background-color: #032159
 }
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 0;
+        width: 480px;
+    }
+
+    header {
+        width: 480px;
+        padding: 15px;
+    }
+
+    .header-left img {
+        width: 100%;
+    }
+
+    .header-text h2 {
+        font-size: 2.5em;
+    }
+
+    .header-text p {
+        font-size: 1em;
+    }
+
+    .social-logo {
+        width: 5%;
+        height: 5%;
+    }
+
+    .skill-bar {
+        width: 90%;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+}
 
