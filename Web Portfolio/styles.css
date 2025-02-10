@@ -479,16 +479,16 @@ header, .section {
 @media only screen and (max-width: 480px) {
     body {
         padding: 0;
-        width: 100%;
+        width: 300%;
     }
 
     header {
-        width: 100%;
+        width: 200%;
         padding: 15px;
     }
 
     .header-left img {
-        width: 70%;
+        width: 100%;
     }
 
     .header-text h2 {
