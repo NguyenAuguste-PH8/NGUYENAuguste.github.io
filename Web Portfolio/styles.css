@@ -473,109 +473,89 @@ header, .section {
     background-color: #032159
 }
 
-/* Mobile responsiveness for Samsung S22 Ultra and similar screens */
 @media screen and (max-width: 430px) {
     body {
-        font-size: 14px; /* Reduce font size for better readability */
-        padding: 0; /* Remove excess padding */
+        font-size: 16px; /* Bigger default font size */
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        overflow-x: hidden;
     }
 
     header {
-        flex-direction: column; /* Stack header elements vertically */
-        align-items: center; /* Center content */
-        padding: 20px; /* Reduce padding */
-        transform: scale(1); /* Ensure it fills the screen */
-        width: 100%;
-    }
-
-    .header-left {
-        margin: 0;
+        width: 100vw;
+        min-height: 100vh; /* Make sure header fills the screen */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
     }
 
     .header-left img {
-        width: 120px; /* Adjust profile image size */
+        width: 150px; /* Scale image up */
         height: auto;
-        left: 0;
-        top: 0;
-    }
-
-    .social-links {
-        flex-direction: row; /* Display social icons in a row */
-        gap: 15px;
     }
 
     .header-right {
-        text-align: center; /* Center text */
-        margin-left: 0;
+        width: 90%;
     }
 
     .header-right h1 {
-        font-size: 2em; /* Adjust size */
+        font-size: 2.5em;
     }
 
     .header-right p {
-        font-size: 1em;
-    }
-
-    .header-text {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .header-text h2 {
-        font-size: 2.2em;
-    }
-
-    .header-text p {
-        font-size: 1em;
-    }
-
-    #pic {
-        height: 25vh;
+        font-size: 1.2em;
     }
 
     section {
-        width: 90%;
-        margin: 10px auto;
-        padding: 15px;
-    }
-
-    .skills-container, .languages-container, .hobbies-container {
-        font-size: 20px;
-    }
-
-    #skill-list, #language-list, #hobby-list {
+        width: 100vw;
+        min-height: 100vh; /* Each section fills the whole screen */
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        padding: 20px;
     }
 
-    .hobby-item {
-        width: 90%;
-        margin: 5px 0;
+    .skills-container,
+    .languages-container,
+    .hobbies-container {
+        width: 100%;
+        text-align: center;
+        font-size: 22px; /* Larger text for readability */
     }
 
     .carousel-container {
-        width: 100%;
-        overflow: hidden;
+        width: 100vw;
+        min-height: 100vh; /* Fill the whole screen */
     }
 
     .carousel {
-        flex-direction: column; /* Stack projects vertically */
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        width: 100%;
+        height: 100%;
     }
 
     .project {
-        flex: 0 0 100%; /* Full width */
+        width: 90vw;
+        height: auto;
+        text-align: center;
     }
 
     .project img {
         width: 100%;
+        max-width: 100%;
     }
 
     .arrow {
-        font-size: 1.5em;
-        padding: 5px;
+        font-size: 2em; /* Bigger arrows for easy navigation */
     }
 }
+
 
 
