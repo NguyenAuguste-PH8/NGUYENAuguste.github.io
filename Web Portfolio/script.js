@@ -25,23 +25,26 @@ const skills = [
 // Function to generate the skill bars dynamically
 function displaySkills() {
     const skillList = document.getElementById('skill-list');
-    skills.forEach(skill => {
+    
+    skills.forEach((skill, index) => {
         // Create a div for the skill bar
         const skillBar = document.createElement('div');
         skillBar.className = 'skill-bar';
-        
+
         // Create a span element to represent the progress
         const skillProgress = document.createElement('span');
-        skillProgress.style.width = skill.value + '%'; // Set the width of the progress bar
-        skillProgress.style.backgroundColor = getColorForSkill(skill.value); // Set color based on skill level
-        skillProgress.textContent = `${skill.name}`; // Add the skill name and value to the bar
-        
+        skillProgress.className = 'skill-progress';
+        skillProgress.style.backgroundColor = getColorForSkill(skill.value); // Set color
+        skillProgress.textContent = `${skill.name}`; // Add skill name
         
         // Append the progress to the skill bar
         skillBar.appendChild(skillProgress);
-        
-        // Append the skill bar to the skill list
         skillList.appendChild(skillBar);
+
+        // Delay animation for each bar
+        setTimeout(() => {
+            skillProgress.style.width = skill.value + '%'; // Apply the animation
+        }, index * 200); // Delay each bar by 200ms
     });
 }
 
@@ -50,7 +53,7 @@ function getColorForSkill(value) {
     if (value >= 80) return '#0a2472'; 
     if (value >= 60) return '#023e8a'; 
     if (value >= 20) return '#0077b6';
-    return { color: '#465576', message: '- Just beginning to learn' }
+    return '#a6e1fa';
 }
 
 // Call the function to display skills when the page loads
