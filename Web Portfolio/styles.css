@@ -4,6 +4,7 @@ body {
     color: #0d1b2a;
     margin: 0;
     padding: 1px;
+    overflow-x: hidden; /* Prevent horizontal scrolling across the body */
 }
 
 header {
