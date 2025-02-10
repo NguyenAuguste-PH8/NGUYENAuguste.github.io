@@ -17,7 +17,6 @@ header {
     background-color: #f4f4f4;
     gap: -80px; /* Space between sections */
     width: 100%;
-    width: 100%;
     transform: scale(0.86); 
     margin-bottom: 50px; /* Adds spacing below the header */
 }
