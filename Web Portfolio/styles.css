@@ -492,6 +492,17 @@ header, .section {
         text-align: center;
         padding: 10px;
     }
+    .above-header {
+        width: 100vw;
+        min-height: 100vh
+        display: flex; /* Use flexbox to align items horizontally */
+        align-items: center; /* Vertically center the content */
+        justify-content: flex-start; /* Align items to the left (you can change this to center if you want) */
+        gap: 20px; /* Adds space between logos and text */
+        background-color: #0d1b2a; /* Optional: Add a background color to resemble a toolbar */
+        padding: 10px 20px; /* Adds padding for better spacing */
+        color: white; /* Ensures text is visible */
+}
 
     .header-left img {
         width: 150px; /* Scale image up */
