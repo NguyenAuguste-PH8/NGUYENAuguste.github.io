@@ -9,7 +9,7 @@ function showContact() {
 // Sample skills data with names and values (percentage)
 const skills = [
     { name: "JavaScript", value: 73 },
-    { name: "HTML", value: 68 },
+    { name: "HTML", value: 83 },
     { name: "CSS", value: 78 },
     { name: "Python", value: 93 },
     { name: "Java", value:  69},
