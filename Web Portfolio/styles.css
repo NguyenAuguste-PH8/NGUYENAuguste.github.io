@@ -77,13 +77,13 @@ header {
     margin-top: 10px;
     font-size: 2.8em;
     font-family: 'Times New Roman', Times, serif ;
-    color: #1b263b;
+    color: #032b55;
 }
 
 .header-right p0{
     margin: 5px 0;
     font-size: 2em;
-    color: #1b263b;
+    color: #032159;
     font-family: 'Times New Roman', Times, serif ;
     font-style: oblique;
 }
@@ -91,7 +91,7 @@ header {
 .header-right p{
     margin: 5px 0;
     font-size: 1.3em;
-    color: #1b263b;
+    color: #032159;
     font-family: 'Times New Roman', Times, serif ;
     
 }
@@ -130,6 +130,7 @@ section {
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #032b55;
 }
 
 
@@ -278,7 +279,7 @@ button {
     text-align: center; /* Center the heading and skill list */
     margin-bottom: 20px; /* Add some space below the skill list */
     font-size: 24px; 
-    color: #001d3d;
+    color: #032b55;
 }
 
 /* Style for the image container */
@@ -314,7 +315,7 @@ button {
     text-align: center; /* Center the heading and language list */
     margin-top: 10px; /* Space above the language section */
     font-size: 25px; 
-    color: #001d3d
+    color: #032b55;
 }
 
 /* Style for the language list */
