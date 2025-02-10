@@ -154,3 +154,21 @@ window.onload = function() {
     displayLanguages(); // Assuming displayLanguages() is already defined for languages
     displayHobbies(); // Display hobbies
 };
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const carousel = document.querySelector('.carousel');
+    const totalProjects = document.querySelectorAll('.project').length;
+
+    currentSlide += direction;
+
+    // Ensure the slide wraps around when reaching the end or beginning
+    if (currentSlide < 0) {
+        currentSlide = totalProjects - 3; // Wrap around to last set
+    } else if (currentSlide >= totalProjects - 2) {
+        currentSlide = 0; // Wrap around to first set
+    }
+
+    // Move the carousel by shifting it horizontally
+    carousel.style.transform = `translateX(-${currentSlide * (100 / 3)}%)`;
+}
