@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <body>
+    <body class="custom-body">
         <div class="above-header">
             <a href="https://www.lgk.lu/" target="_blank">
                 <img src="LGK_logo.png" class="logo1" width="200px">  
@@ -78,8 +78,8 @@
             <h2>My Hobbies</h2>
             <ul id="hobby-list"></ul> <!-- JavaScript will add hobbies here -->
         </div>
-    
     </section>
+
     <div id="pic">
         <img src = "pc.gif">
     </div>
@@ -91,6 +91,45 @@
         </div>
         <div class="image-container">   <nav><img src='pic.gif'> </nav></div>
     </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="carousel-container">
+            <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+            
+            <div class="carousel">
+                <div class="project">
+                    <a href="project1.pdf" target="_blank"> <!-- Link to the document -->
+                        <img src="project1.jpg" alt="Project 1">
+                        <p>Project 1 Description</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="project2.pdf" target="_blank">
+                        <img src="project2.jpg" alt="Project 2">
+                        <p>Project 2 Description</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="project3.pdf" target="_blank">
+                        <img src="project3.jpg" alt="Project 3">
+                        <p>Project 3 Description</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="project4.pdf" target="_blank">
+                        <img src="project4.jpg" alt="Project 4">
+                        <p>Project 4 Description</p>
+                    </a>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+            
+            <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
 
     <section id="contact">
         <h2>Contact Me</h2>
