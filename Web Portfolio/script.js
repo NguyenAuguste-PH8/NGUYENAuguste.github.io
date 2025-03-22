@@ -118,12 +118,12 @@ window.onload = function() {
 
 // Sample hobbies data with names and optional icons
 const hobbies = [
-    { name: "Chess", icon: "chess-icon.png" },
-    { name: "Breakdance", icon: "breaking-icon.png" },
-    { name: "Martial Arts", icon: "martialart.png" },
-    { name: "Boxing", icon: "boxing.png" },
-    { name: "Coding", icon: "coding.png" },
-    { name: "Traveling", icon: "travelling.png" }
+    { name: "Chess", icon: "Logos/chess-icon.png" },
+    { name: "Breakdance", icon: "Logos/breaking-icon.png" },
+    { name: "Martial Arts", icon: "Logos/martialart.png" },
+    { name: "Boxing", icon: "Logos/boxing.png" },
+    { name: "Coding", icon: "Logos/coding.png" },
+    { name: "Traveling", icon: "Logos/travelling.png" }
 ];
 
 // Function to generate the hobbies list
