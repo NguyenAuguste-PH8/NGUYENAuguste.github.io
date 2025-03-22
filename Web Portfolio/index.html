@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <body class="custom-body">
+        <div class="above-header">
+            <a href="https://www.lgk.lu/" target="_blank">
+                <img src="Logos\LGK_logo.png" class="logo1" width="200px">  
+            </a>
+            <div class="header-text">
+                <h2>Welcome to My Portfolio</h2>
+                <p>   
+                    <ol><nav>
+                    <a href="#about">About Me</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">My Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav></ol>
+                </p>
+            </div>
+            <img src="Logos\LogoBts (1).png" class="logo">
+           
+        </div>
+    </body>
+    
+    <header>
+        <!-- Social Links (Positioned vertically) -->
+        <div class="social-links">
+            
+            <a href="https://www.linkedin.com/in/auguste-duc-liêm-kim-nguyen" target="_blank">
+                <img src="Logos\linkedin-logo.png" alt="LinkedIn" class="social-logo">
+            </a>
+            <a href="https://github.com/NguyenAuguste-PH8/NGUYENAuguste-PH8.github.io" target="_blank">
+                <img src="Logos\github-logo.png" alt="GitHub" class="social-logo">
+            </a>
+            <a href="mailto:nguyen.auguste@hotmail.fr"" id="copy-email">
+                <img src="Logos\email-icon.png" alt="Email Icon" class="social-logo">
+            </a>
+        </div>
+        
+        <!-- Header with Image and Links -->
+        <div class="header-content">
+            <nav class="header-left">
+                <img src="Logos\Me.jpg" alt="Picture of Auguste" width="400px"> 
+            </nav>
+        </div>
+        <div>
+            <nav class="header-right" id="about">
+                <h1>NGUYEN <br>Auguste Duc-Liêm Kim</h1>
+                <p0> About Me   </p0> <br>
+                <p>Hello! My name is Auguste Duc-Liêm Kim Nguyen, and I am passionate about using technology to solve complex challenges. 
+                    <br><br>As a BTS Cloud Computing student at Lycée Guillaume Kroll (LGK), 
+                    I have developed a solid foundation in cloud architecture, networking, and cybersecurity, which allows me to think analytically and create innovative solutions.
+                    
+                    <br><br>I am dedicated to mastering cloud infrastructure, virtualization, and network management, with hands-on experience in deploying and maintaining cloud-based solutions. Through this experience, I will have the ability to optimize IT environments, ensuring secure, scalable, and high-performance cloud operations. 
+                    <br>I am driven by the potential of cloud technologies to enhance innovation and efficiency in today’s digital landscape.
+                    
+                    <br><br>I am always looking to connect with professionals and organizations in the cloud computing field to exchange insights and explore exciting collaboration opportunities. </p>
+            </nav>
+        </div>
+        <div id="cvbutton">  
+            <button onclick="window.open('PDFs\cv.pdf', '_blank')">Read my CV</button>
+            <button onclick="window.open('PDFs\cvfr.pdf', '_blank')">Lire mon CV</button>
+        </div>
+        
+    </header>
+    <section id="languages">
+        <div class="languages-container">
+            <h2>Languages</h2>
+            <ul id="language-list"></ul> <!-- JavaScript will add language skills here -->
+        </div>
+    </section>
+    <section id="hobbies">
+        <div class="hobbies-container">
+            <h2>My Hobbies</h2>
+            <ul id="hobby-list"></ul> <!-- JavaScript will add hobbies here -->
+        </div>
+    </section>
+
+    <div id="pic">
+        <img src = "Logos\pc.gif">
+    </div>
+
+    <section id="skills">
+        <div class="skills-container">
+        <h2>Programming Skills</h2>
+        <ul id="skill-list"></ul> <!-- JavaScript will add skills here -->
+        </div>
+        <div class="image-container">   <nav><img src='Logos\pic.gif'> </nav></div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="carousel-container">
+            <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+            
+            <div class="carousel">
+                <div class="project">
+                    <a href="Projects\project1.pdf" target="_blank"> <!-- Link to the document -->
+                        <img src="Pictures\project1.png" alt="Project 1">
+                        <p>Installing NextCloud on Docker</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="Projects\project2.pptx" target="_blank">
+                        <img src="Pictures\project2.png" alt="Project 2">
+                        <p>Chess Analyser Database with PowerApps</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="Projects\project3.pdf" target="_blank">
+                        <img src="Pictures\project3.png" alt="Project 3">
+                        <p>Horse Race Simulator</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="Projects\project4.pdf" target="_blank">
+                        <img src="Pictures\project4.png" alt="Project 4">
+                        <p>Reviewing Report for Chatbot as a Dictionary <br> of Sumaiya AKTER</p>
+                    </a>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+            
+            <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <button onclick="showContact()">Show Contact Info</button>
+        <p id="contact-info" style="display: none;">
+            <a href="mailto:nguyen.auguste@hotmail.fr"> Email: nguyen.auguste@hotmail.fr</a>
+            <br><br>
+            <div class="social-links2">
+            
+                <a href="https://www.linkedin.com/in/auguste-duc-liêm-kim-nguyen" target="_blank">
+                    <img src="Logos\linkedin-logo.png" alt="LinkedIn" class="social-logo">
+                </a>
+                <a href="https://github.com/NguyenAuguste-PH8/NGUYENAuguste-PH8.github.io" target="_blank">
+                    <img src="Logos\github-logo.png" alt="GitHub" class="social-logo">
+                </a>
+                <a href="mailto:nguyen.auguste@hotmail.fr" id="copy-email2">
+                    <img src="Logos\email-icon.png" alt="Email Icon" class="social-logo">
+                </a>
+            </div>
+        </p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
