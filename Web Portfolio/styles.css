@@ -1,9 +1,9 @@
 body {
+    
     font-family: 'Times New Roman', Times, serif; 
     background-color: #f4f4f4;
     color: #0d1b2a;
     margin: 0;
-    padding: 1px;
     overflow-x: hidden; /* Prevent horizontal scrolling across the body */
 }
 
@@ -177,23 +177,25 @@ button {
    
 }
 
-
+.logo1 {
+    border-radius: 5%
+}
 
 /* Styling for logos to ensure they are the same size and rectangular */
 .logo {
     width: 150px; /* Fixed width for logos */
     height: 100px; /* Fixed height for logos */
     object-fit: contain; /* Ensures the image keeps its aspect ratio while fitting */
-    margin-left: 330px;
+    margin-right:1.5%;
 }
 
 /* Toolbar styling for the above-header */
 .above-header {
-    display: flex; /* Use flexbox to align items horizontally */
+    display: flex;/* Use flexbox to align items horizontally */
     align-items: center; /* Vertically center the content */
-    justify-content: flex-start; /* Align items to the left (you can change this to center if you want) */
-    gap: 20px; /* Adds space between logos and text */
-    background-color: #0d1b2a; /* Optional: Add a background color to resemble a toolbar */
+    justify-content: space-between; /* Align items to the left (you can change this to center if you want) */
+  
+    background-image: linear-gradient(to bottom right, #0d1b2a, #1a5592); /* Optional: Add a background color to resemble a toolbar */
     padding: 10px 20px; /* Adds padding for better spacing */
     color: white; /* Ensures text is visible */
     width: 100%;
@@ -204,13 +206,14 @@ button {
     display: flex;
     flex-direction: column; /* Stack the text vertically */
     justify-content: center; /* Vertically center the text */
-    margin-left: 250px;
+   
     font-family: 'Times New Roman', Times, serif ;
 
 }
 
 /* Optional: Styling for text to improve readability */
 .header-text h2 {
+    display: flex;
     margin-top: -5px;
     margin-bottom: -10px;
     font-size: 3em;
@@ -231,6 +234,8 @@ button {
 
 .logo1 {
     margin-left: -10px;
+    display: flex;
+    justify-content: right;
 }
 
 #cvbutton{
