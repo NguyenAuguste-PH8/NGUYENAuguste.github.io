@@ -481,3 +481,70 @@ header, .section {
 .arrow:hover {
     background-color: #032159
 }
+* Mobile view (480px and below) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-right h1 {
+        font-size: 1.8em;
+    }
+    body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 300%;
+
+    }
+    .header-right p {
+        font-size: 1em;
+    }
+    h2{
+        font-size: 2.5em;
+        
+    }
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+    #pic{
+        width: 100%;
+    }
+    .project {
+        flex: 0 0 100%; /* Show 1 project per row */
+    }
+    #projects {
+        font-size: 1.8em;
+    }
+    .carousel-container {
+        width: 75%;
+        overflow: hidden;
+    }
+    
+
+    .arrow {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+
+    
+
+    .skill-bar {
+        width: 70%;
+    }
+
+    #cvbutton {
+        width: 80%;
+        height: auto;
+        font-size: 1em;
+    }
+
+    .hobby-item {
+        width: 100%;
+    }
+}
+
