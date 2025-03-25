@@ -12,7 +12,7 @@ const skills = [
     { name: "CSS", value: 78 },
     { name: "Python", value: 93 },
     { name: "Java", value:  69},
-    { name: "Dash", value: 42},
+    { name: "Bash", value: 42},
     { name: "Powershell", value:  55},
     { name: "Azure", value:  40},
     { name: "AWS", value:  28},
