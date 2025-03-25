@@ -137,12 +137,13 @@ section {
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-color: #1a5592;  
 }
 
 /* Zoom-in effect on hover */
 section:hover {
     transform: scale(1.08);  /* Zoom in */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Optional: Shadow for emphasis */
+    box-shadow: 0px 0px 15px #1a5592;  /* Optional: Shadow for emphasis */
   }
 
 #pic {
@@ -194,8 +195,8 @@ button {
     display: flex;/* Use flexbox to align items horizontally */
     align-items: center; /* Vertically center the content */
     justify-content: space-between; /* Align items to the left (you can change this to center if you want) */
-  
-    background-image: linear-gradient(to bottom right, #0d1b2a, #1a5592); /* Optional: Add a background color to resemble a toolbar */
+    /* Optional: Add a background color to resemble a toolbar */  
+    background-image: linear-gradient(to bottom right, #0d1b2a, #1a5592); 
     padding: 10px 20px; /* Adds padding for better spacing */
     color: white; /* Ensures text is visible */
     width: 100%;
@@ -344,12 +345,15 @@ button {
     display: flex; /* Use flexbox to align language skills horizontally */
     flex-direction: column; /* Stack language skills vertically */
     align-items: center; /* Center the items horizontally */
+    margin-bottom: 1%;
+    background-color: #f0f0f0;
 }
 
 /* Style for each language skill */
 .language-skill {
     margin: 10px 0; /* Add space between language skills */
     font-size: 18px; /* Adjust font size for language skills */
+   
 }
 
 /* Style for the stars */
@@ -373,7 +377,7 @@ button {
     display: flex; /* Use flexbox to align hobbies horizontally */
     flex-wrap: wrap; /* Allow wrapping of hobby items */
     justify-content: center; /* Center the items */
-    
+    margin-bottom: 1%;
 }
 
 /* Style for each hobby */
@@ -481,15 +485,27 @@ header, .section {
 .arrow:hover {
     background-color: #032159
 }
-* Mobile view (480px and below) */
-@media screen and (max-width: 480px) {
-    header {
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
+/* Tablet view (768px and below) */
+@media screen and (max-width: 768px) {
+    header {
+        display: inline-block;
+        
+        flex-direction: flex;
+        text-align: left;
+        font-size: 2.5em;
+    }
+    .above-header{
+        font-size: 1.3em;
+    }
+    .header-left{
+        float:right;
+        margin-left:100%;
+    }
+    .header-content{
+        float: right;
+    }
+   
     .header-right h1 {
         font-size: 1.8em;
     }
@@ -513,12 +529,21 @@ header, .section {
     }
     #pic{
         width: 100%;
+
     }
     .project {
         flex: 0 0 100%; /* Show 1 project per row */
     }
     #projects {
         font-size: 1.8em;
+    }
+
+    #language-list{
+        margin-left: 14%;
+        background-color: #f0f0f0;
+        font-size: 10%;
+        width: 71%;
+        margin-bottom: 2%;
     }
     .carousel-container {
         width: 75%;
@@ -539,12 +564,109 @@ header, .section {
 
     #cvbutton {
         width: 80%;
-        height: auto;
-        font-size: 1em;
+        margin-top: 3.5%;
+        margin-left: 45%;
     }
 
     .hobby-item {
-        width: 100%;
+        width: 70%;
+        margin-bottom: 2%;
     }
 }
 
+
+/* Mobile view (480px and below) */
+@media screen and (max-width: 480px) {
+    header {
+        display: inline-block;
+        
+        flex-direction: flex;
+        text-align: left;
+        font-size: 2.5em;
+    }
+    .above-header{
+        font-size: 1.3em;
+    }
+    .header-left{
+        float:right;
+        margin-left:100%;
+    }
+    .header-content{
+        float: right;
+    }
+
+    .header-right h1 {
+        font-size: 1.8em;
+    }
+    body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 300%;
+        
+
+    }
+    .header-right p {
+        font-size: 1em;
+    }
+    h2{
+        font-size: 2.5em;
+        
+    }
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+    #pic{
+        width: 100%;
+
+    }
+    .project {
+        flex: 0 0 100%; /* Show 1 project per row */
+    }
+    #projects {
+        font-size: 1.8em;
+    }
+
+    #language-list{
+        margin-left: 14%;
+        background-color: #f0f0f0;
+        width: 71%;
+        margin-bottom: 2%;
+    }
+    .languages-container{
+        margin: 10px 0; /* Add space between language skills */
+       
+    }
+    .carousel-container {
+        width: 75%;
+        overflow: hidden;
+        font-size: 1.3em;
+    }
+    
+
+    .arrow {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+
+    
+
+    .skill-bar {
+        width: 70%;
+    }
+
+    #cvbutton {
+        width: 80%;
+        height: auto;
+        font-size: 1em;
+        margin-top: 3.5%;
+        margin-left: 40%;
+ 
+    }
+
+    .hobby-item {
+        width: 70%;
+        margin-bottom: 2%;
+    }
+}
