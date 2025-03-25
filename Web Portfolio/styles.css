@@ -168,7 +168,7 @@ section:hover {
  
 button {
     padding: 10px 15px;
-    background-color: #002e84;
+    background-image: linear-gradient(to bottom right,#1a5592,#163352);
     color: white;
     border: none;
     border-radius: 5px;
