@@ -610,6 +610,7 @@ header, .section {
         align-items: center;
         text-align: center;
         width: 390%;
+        overflow-x: hidden;
         
 
     }
