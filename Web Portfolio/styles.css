@@ -669,12 +669,12 @@ header, .section {
     }
     .logo{
         scale: 1.1;
-        height: 230px;
-        margin-right: 2%;
+        height: 200px;
+        margin-right: 3%;
     }
     .logo1{
         scale: 1.1;
-        height: 130px;
+        height: 100px;
         margin-left: 2%;
 
     }
