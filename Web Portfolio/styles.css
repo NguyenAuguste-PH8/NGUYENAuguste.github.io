@@ -611,7 +611,6 @@ header, .section {
         text-align: center;
         width: 390%;
         overflow-x: hidden;
-        
 
     }
     .header-right p {
@@ -668,14 +667,16 @@ header, .section {
         width: 70%;
     }
     .logo{
-        scale: 1.1;
-        height: 200px;
-        margin-right: 3%;
+        scale: 1;
+        float:right;
+        height: 230px;
+        margin-right: 2%;
     }
     .logo1{
-        scale: 1.1;
-        height: 100px;
-        margin-left: 2%;
+        float: left;
+        scale: 1;
+        height: 130px;
+        margin-left: 1%;
 
     }
     .social-logo{
