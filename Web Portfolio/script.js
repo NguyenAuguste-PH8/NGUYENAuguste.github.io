@@ -166,7 +166,7 @@ let index = 0;
 
 function showNextSlide() {
     index++;
-    if (index >= totalProjects-2) {
+    if (index > totalProjects) {
         index = 0; // Reset index to loop
     }
     updateCarousel();
