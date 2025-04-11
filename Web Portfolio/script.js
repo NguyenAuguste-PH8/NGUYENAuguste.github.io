@@ -186,7 +186,7 @@ function getStarsForSkill(value) {
 // Sample hobbies data with names and optional icons
 const hobbies = [
     { name: "Chess", icons: ["Logos/chess-icon.png",  "Logos/stat.png",  "Logos/chess.gif" ]},
-    { name: "Breakdance", icons: ["Logos/breaking-icon.png", "Logos/test0.gif", "Logos/test0.gif", "Logos/test2.gif" ,  "Pictures/break.jpg", "Logos/break.gif", "Logos/break.gif"] },
+    { name: "Breakdance", icons: ["Logos/breaking-icon.png", "Logos/test0.gif", "Logos/test0.gif",  "Pictures/break.jpg", "Logos/break.gif", "Logos/break.gif"] },
     { name: "Martial Arts", icons: ["Logos/martialart.png", "Logos/boxing.png", "Logos/muay.png", "Logos/karate.png", "Logos/jujitsu.png"  ]},
     { name: "Foodie", icons: ["Logos/foodie.png", "Logos/pho.jpeg", "Logos/friedrice.jpg","Logos/steak.jpg", "Logos/banhmi.gif", "Logos/bunbohue.jpg"] },
     { name: "Coding", icons: ["Logos/coding.png", "Logos/fun1.gif", "Logos/fun.gif"]},
