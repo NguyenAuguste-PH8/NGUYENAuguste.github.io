@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="custom-body">
         <div class="above-header">
@@ -46,7 +48,7 @@
         <!-- Header with Image and Links -->
         <div class="header-content">
             <nav class="header-left">
-                <img src="Logos\Me.jpg" alt="Picture of Auguste" width="400px"> 
+                <img src="Logos\01.png" alt="Picture of Auguste" width="370px"> 
             </nav>
         </div>
         <div>
@@ -71,8 +73,14 @@
     </header>
     <section id="languages">
         <div class="languages-container">
-            <h2>Languages</h2>
+            
+            <h2 class="language-title">
+                
+                Languages
+              </h2>
             <ul id="language-list"></ul> <!-- JavaScript will add language skills here -->
+            <img  id="flag-icon" class="flag-icon" src="Logos/flag_viet.png" alt="Languages Icon"> <img id="greetings" class="flag-icon1" src="Logos/xinchao.gif" alt="Languages Icon">
+              
         </div>
     </section>
     <section id="hobbies">
@@ -100,7 +108,14 @@
         <div class="carousel-container">
             <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
             
+            
             <div class="carousel">
+                <div class="project">
+                    <a href="Projects\project0.pdf" target="_blank">
+                        <img src="Pictures\project0.png" alt="Project 0">
+                        <p>Building and Configuring an OpenMediaVault NAS: From Hardware to File Sharing 
+                    </a>
+                </div>
                 <div class="project">
                     <a href="Projects\project1.pdf" target="_blank"> <!-- Link to the document -->
                         <img src="Pictures\project1.png" alt="Project 1">
@@ -125,6 +140,13 @@
                         <p>Reviewing Report for Chatbot as a Dictionary <br> of Sumaiya AKTER</p>
                     </a>
                 </div>
+                <!--
+                <div class="project">
+                    <a href="Projects\projectX.pdf" target="_blank">
+                        <img src="Pictures\projectX.png" alt="Project to be coming/realised">
+                        <p></p>
+                    </a>
+                </div> -->
                 <!-- Add more projects here -->
             </div>
             
@@ -134,26 +156,64 @@
     
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <button id="button" onclick="showContact()">Show Contact Info</button>
-        <p id="contact-info" style="display: none;">
-            <a href="mailto:nguyen.auguste@hotmail.fr"> Email: nguyen.auguste@hotmail.fr</a>
-            <br><br>
-            <div class="social-links2">
-            
+        <h2>
+            <span id="rotating-word" class="highlight fade-in">Contact</span> Me
+          </h2>
+          <button id="button" onclick="showContact()">Leave a Message</button>
+
+          <div id="contact-info" style="display: none;">
+            <form action="https://formspree.io/f/myzelowy" method="POST">
+                <div class="form-row">
+                    <label>
+                        <span class="label-title"> First Name <span class="asterisk">*</span></span>
+                      <input type="text" name="First" required>
+                    </label>
+                    <label>
+                        <span class="label-title"> Last Name <span class="asterisk">*</span></span>
+                      <input type="text" name="Last" required>
+                    </label>
+                  </div>
+              
+                  <div class="form-row">
+                    <label>
+                        <span class="label-title"> Email <span class="asterisk">*</span></span>
+                      <input type="email" name="email" required>
+                    </label>
+                    <label>
+                      <span class="label-title">Phone Number </span>
+                      <input type="tel" name="phone">
+                    </label>
+                  </div>
+              
+                  <div class="form-row full-width">
+                    <label>
+                        <span class="label-title"> Message <span class="asterisk">*</span></span>
+                      <textarea name="message" rows="4" required></textarea>
+                    </label>
+                  </div>
+              
+                  <button type="submit"> Send </button>
+                </form>
+              </div>
+            </div>
+              <div class="social-links2">
                 <a href="https://www.linkedin.com/in/auguste-duc-liêm-kim-nguyen" target="_blank">
-                    <img src="Logos\linkedin-logo.png" alt="LinkedIn" class="social-logo">
+                  <img src="Logos/linkedin-logo.png" alt="LinkedIn" class="social-logo">
                 </a>
                 <a href="https://github.com/NguyenAuguste-PH8/NGUYENAuguste-PH8.github.io" target="_blank">
-                    <img src="Logos\github-logo.png" alt="GitHub" class="social-logo">
+                  <img src="Logos/github-logo.png" alt="GitHub" class="social-logo">
                 </a>
                 <a href="mailto:nguyen.auguste@hotmail.fr" id="copy-email2">
-                    <img src="Logos\email-icon.png" alt="Email Icon" class="social-logo">
+                  <img src="Logos/email-icon.png" alt="Email Icon" class="social-logo">
                 </a>
-            </div>
-        </p>
+              </div>
+          
+        <footer class="site-footer">
+            <small> ©2025 NGUYEN Auguste Duc-Liêm Kim. Designed & Made with Passion! </small>
+          </footer>
+    
     </section>
-
+   
     <script src="script.js"></script>
 </body>
 </html>

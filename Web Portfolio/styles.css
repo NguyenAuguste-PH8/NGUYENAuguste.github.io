@@ -28,14 +28,30 @@ header {
     display: flex;
     flex-direction: column; /* Stack image and social links vertically */
     align-items: center; /* Center content horizontally */
+   
 }
 
 .header-left img {
+    
     position: relative; /* Make the position relative */
     top: 10px; /* Moves the image 10px down */
-    left: 20px; /* Moves the image 20px to the right */
+    left: 10px; /* Moves the image 20px to the right */
     border-radius: 35%; /* Make the image circular */
     margin-bottom: 10px; /* Adds some space below the image */
+    transform: scale(0); /* Start from 0 size */
+    animation: revealImg 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes revealImg {
+    to {
+        transform: scale(0.9) rotateZ(360deg); /* Reveal to original size */
+    }
+}
+@keyframes revealImg3 {
+    to {
+        transform: scale(1); /* Reveal to original size */
+    }
 }
 
 .social-links {
@@ -44,6 +60,15 @@ header {
     flex-direction: column; /* Stack social links vertically */
     gap: 5px; /* Space between icons */
     align-items: center; /* Center icons horizontally */
+    transform: scale(0) translateX(-300px); /* Start from 0 size */
+    animation: revealImg1 1s ease-out forwards;
+    animation-delay: 1.3s;
+}
+
+@keyframes revealImg1 {
+    to {
+        transform: scale(1) translateX(1px) /* Reveal to original size */
+    }
 }
 
 .social-links2 {
@@ -61,13 +86,10 @@ header {
 }
 
 .social-logo:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.3); /* Slightly enlarge on hover */
 }
 
-#cvbutton:hover{
-    transform: scale(1.035); /* Slightly enlarge on hover */
-   
-}
+
 
 .header-right {
     display: flex;
@@ -75,37 +97,50 @@ header {
     justify-content: center;
     margin-left: 90px;
     font-family: 'Times New Roman', Times, serif ;
-   
-    
+        
 }
 
 .header-right h1 {
     margin-top: 10px;
     font-size: 2.8em;
-    font-family: 'Times New Roman', Times, serif ;
+    font-family: 'Slabo', serif ;
     color: #07315e;
+    transform: scale(0); /* Start from 0 size */
+    animation: revealImg3 1s ease-out forwards;
+    animation-delay: 2.3s;
 }
 
 .header-right p0{
     margin: 5px 0;
     font-size: 2em;
     color: #032159;
-    font-family: 'Times New Roman', Times, serif ;
+    font-family: 'Slabo', serif ;
     font-style: oblique;
+    transform: scale(0); /* Start from 0 size */
+    animation: revealImg3 1s ease-out forwards;
+    animation-delay: 2.6s;
 }
 
 .header-right p{
     margin: 5px 0;
     font-size: 1.3em;
     color: #032159;
-    font-family: 'Times New Roman', Times, serif ;
-    
+    font-family: 'Slabo', serif ;
+    transform: scale(0) translateY(400px); /* Start from 0 size */
+    animation: revealImg4 1s ease-out forwards;
+    animation-delay: 3s;
+}
+@keyframes revealImg4 {
+    to {
+        transform: scale(1) translateY(0px); /* Reveal to original size */
+    }
 }
 .header-right h2 {
     margin: 5px 0;
     font-size: 1.2em;
     color: #1b263b;
     font-family: 'Times New Roman', Times, serif ;
+    cursor: default;
 }
 
 .header-nav {
@@ -142,20 +177,21 @@ section {
 
 /* Zoom-in effect on hover */
 section:hover {
-    transform: scale(1.08);  /* Zoom in */
+    transform: scale(1.07);  /* Zoom in */
     box-shadow: 0px 0px 15px #1a5592;  /* Optional: Shadow for emphasis */
-  }
+    filter: drop-shadow(-5px -1px 30px #5ba5ff);  
+    
+}
 
 #pic {
     background-color: #f4f4f4;
-    width: 100%;
-    height: 100%;
+    
     object-fit: cover; /* Ensures the image covers the entire section */
     width: 100vw;
-    height: 33vh;
+    height: 40vh;
     display: flex;
     justify-content: center; /* Centers horizontally */
-    overflow-y: auto; /* Enables scrolling if content exceeds size */
+    overflow-y:  auto; /* Enables scrolling if content exceeds size */
     margin-bottom: -20px;
     margin-top: -18px;
 }
@@ -169,7 +205,7 @@ section:hover {
  
 button {
     padding: 10px 15px;
-    background-image: linear-gradient(to bottom right,#1a5592,#163352);
+    background-image: linear-gradient(to top right, #7ad5ff, #002e84,  #7ad5ff);
     color: white;
     border: none;
     border-radius: 5px;
@@ -196,10 +232,19 @@ button {
     align-items: center; /* Vertically center the content */
     justify-content: space-between; /* Align items to the left (you can change this to center if you want) */
     /* Optional: Add a background color to resemble a toolbar */  
-    background-image: linear-gradient(to bottom right, #0d1b2a, #1a5592); 
+    background-image: linear-gradient(to bottom right, #0d1b2a, #1a5592, #002e84 ,#1a5592,#7ad5ff); 
     padding: 10px 20px; /* Adds padding for better spacing */
     color: white; /* Ensures text is visible */
     width: 100%;
+    transform: translateY(-300px); /* Start from 0 size */
+    animation: revealImg2 1s ease-out forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes revealImg2 {
+    to {
+        transform: translateY(0); /* Reveal to original size */
+    }
 }
 
 /* Styling for the text section */
@@ -208,7 +253,7 @@ button {
     flex-direction: column; /* Stack the text vertically */
     justify-content: center; /* Vertically center the text */
    
-    font-family: 'Times New Roman', Times, serif ;
+    font-family: 'Slabo', serif ;
 
 }
 
@@ -219,13 +264,14 @@ button {
     margin-bottom: -10px;
     font-size: 3em;
     white-space: nowrap;
-    font-family: 'Times New Roman', Times, serif ;
+    font-family: 'Slabo', serif ;
     text-align: center; 
+    cursor: default;
    
 }
 
 .header-text p {
-    font-family: 'Times New Roman', Times, serif ;
+    font-family: 'Slabo', serif ;
     margin-bottom: -10px;
     font-size: 1em;
     margin-top: 10px;
@@ -234,9 +280,9 @@ button {
 }
 
 .logo1 {
-    margin-left: -10px;
+    margin-left: -7%;
     display: flex;
-    justify-content: right;
+    justify-content: left;
 }
 
 #cvbutton{
@@ -251,7 +297,16 @@ button {
     gap: 5px;
     height: 4%;
     width: 4%;
+    transform:scale(0) translateX(200px); /* Start from 0 size */
+    animation: revealImg1 1s ease-out forwards;
+    animation-delay: 1.3s;
 }
+#cvbutton:hover{
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    
+}
+
+
 #skill-list {
     margin-top: 20px;
 }
@@ -329,13 +384,28 @@ button {
     
 
 }
+.flag-icon{
+    width: 100px;
+    transform: translateX(-320px) translateY(-208px);
+   
+}
+.flag-icon1{
+    width: 200px;
+    transform: translateX(320px) translateY(-188px);
+   
+}
+
 /* Style for the languages container */
 .languages-container {
     text-align: center; /* Center the heading and language list */
     margin-top: 10px; /* Space above the language section */
     font-size: 25px; 
     color: #07315e;
-}
+    overflow: hidden;
+    margin-bottom: -50px;
+
+   
+   }
 
 /* Style for the language list */
 #language-list {
@@ -358,19 +428,39 @@ button {
    
 }
 
-/* Style for the stars */
-.stars {
-    color: gold;
-    font-size: 20px; /* Adjust star size */
+#flag-icon,
+#greetings {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#languages:hover #flag-icon,
+#languages:hover #greetings {
+  opacity: 1;
 }
 
 /* Style for the hobbies container */
 .hobbies-container {
     text-align: center; /* Center the heading and hobby list */
-    margin-top: 40px; /* Space above the hobbies section */
+    margin-top: 30px; /* Space above the hobbies section */
     font-size: 25px;
+    margin-bottom: 220px;
+   
+
+}
+#hobbies {
+    height: 450px;
+    background-image: url("Logos/back.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0%; /* Start at 0% */
+    transition: background-size 0.6s ease-out;
 }
 
+#hobbies.hovering-hobbies {
+    background-size: 100%;
+    height: 100%;
+}
 /* Style for the hobby list */
 #hobby-list {
     list-style-type: none; /* Remove default list styles */
@@ -378,27 +468,46 @@ button {
     margin: 0; /* Remove margin */
     display: flex; /* Use flexbox to align hobbies horizontally */
     flex-wrap: wrap; /* Allow wrapping of hobby items */
-    justify-content: center; /* Center the items */
+    justify-content:center; /* Center the items */
     margin-bottom: 1%;
+    
 }
 
 /* Style for each hobby */
 .hobby-item {
-    margin: 10px 20px; /* Add space between hobby items */
+    margin: 15px 20px; /* Add space between hobby items */
+    margin-top: 15px;
+    transform: translateY(15px);
     font-size: 18px; /* Adjust font size for hobbies */
     text-align: center; /* Center the text for each hobby */
     background-color: #f0f0f0; /* Optional: Add background for hobby items */
     padding: 15px; /* Add padding around the text */
     border-radius: 8px; /* Rounded corners for hobby items */
-    width: 150px; /* Set a width for each hobby item */
+    width: 185px; /* Set a width for each hobby item */
+    height: 85px;
+    transition: transform 0.6s ease-in-out;
 }
+#hobbies:hover .hobby-item {
+    transform: translateY(95px); /* or any distance you want */
+}
+
+
 
 /* Optional: Style for hobby icons */
 .hobby-icon {
+    cursor: pointer;
+    transition: transform 2.5s ease-in-out;
     display: block;
+    background:inherit;
     margin: 0 auto 10px; /* Center the icon and add space below it */
     width: 50px; /* Adjust the size of the icon */
     height: 50px; /* Adjust the size of the icon */
+  
+}
+.hobby-icon:hover {
+    transform: translateY(15px) scaleX(3.4) scaleY(2);
+    border-radius: 20%;
+
 }
 
 header, .section {
@@ -414,6 +523,9 @@ header, .section {
   #projects {
     text-align: center;
     margin-top: 20px;
+    height: 580px;
+    overflow: hidden;
+    
 }
 
 #projects h2 {
@@ -421,6 +533,7 @@ header, .section {
     margin-bottom: 40px;
     margin-top: 10px;
     color: #07315e;
+    cursor: default;
 }
 
 /* Style the carousel container */
@@ -488,6 +601,120 @@ header, .section {
     background-color: #032159
 }
 
+.half-screen {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 90%;
+   
+    background: #fff;
+    object-fit: contain;
+    
+    border: 2px solid #00085a;
+    box-shadow: 0px 0px 100px  rgba(0,0,0,0.5);
+    backdrop-filter: blur(100px); /* Blur the background behind the image */
+  
+    
+  
+}
+
+#hobby-list, .hobby-item {
+    position: relative;
+    z-index: 1;
+  }
+
+.highlight {
+    cursor: wait;
+    background-image: linear-gradient(to bottom right, #001450,#7dd3fc, #002e84, #7dd3fc,#1e40af);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    
+
+  }
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+  }
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.site-footer {
+    text-align: center;
+    padding: 4px;
+    font-size: 0.9rem;
+    color: #888;
+    background-color: #f9f9f9;
+   
+  }
+#contact-info{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    display: flex;
+    padding: 30px;
+    background-image: linear-gradient(  #002e84 ,#7ad5ff,#7ad5ff,#1a5592); 
+
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 70%;
+    justify-content: center;
+    margin-left: 15%;
+  }
+  .form-row.full-width {
+    grid-template-columns: 1fr;
+    margin-bottom: 15px;
+  }
+  .label-title {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .asterisk {
+    color: #180091; /* or any blue you like */
+  }
+  
+  
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #f0f0f0;
+  }
+  
+input, textarea {
+    font-style: "Heretica";
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 4px;
+    resize: vertical;
+    margin-bottom: 5px;
+}
+  
+
+  
+
 /* Tablet view (768px and below) */
 @media screen and (max-width: 768px) {
     header {
@@ -495,10 +722,10 @@ header, .section {
         
         flex-direction: flex;
         text-align: left;
-        font-size: 2.5em;
+        font-size: 2.8em;
     }
     .above-header{
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
     .header-left{
         float:right;
@@ -509,20 +736,21 @@ header, .section {
     }
    
     .header-right h1 {
-        font-size: 1.8em;
+        font-size: 2.2em;
     }
     body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 300%;
+        width: 350%;
 
     }
     .header-right p {
         font-size: 1em;
     }
     h2{
-        font-size: 2.5em;
+        font-size: 3.5em;
+             
         
     }
     .social-links {
@@ -534,18 +762,22 @@ header, .section {
 
     }
     .project {
-        flex: 0 0 100%; /* Show 1 project per row */
+        flex: 0 0 78%; /* Show 1 project per row */
     }
     #projects {
-        font-size: 1.8em;
+        margin-top: 30px;
+        font-size: 2.2em;
+        height:1500px;
+
     }
 
     #language-list{
+        
         margin-left: 14%;
         background-color: #f0f0f0;
-        font-size: 10%;
         width: 71%;
         margin-bottom: 2%;
+        
     }
     .carousel-container {
         width: 75%;
@@ -558,21 +790,48 @@ header, .section {
         padding: 5px;
     }
 
-    
+    #skills{
+        height: 100%;
+    }
 
     .skill-bar {
+        margin-top: 0.5%;
         width: 70%;
     }
+    #projects{
+        height: 1600px;
+
+    }
+   
 
     #cvbutton {
-        width: 80%;
-        margin-top: 3.5%;
-        margin-left: 45%;
+        scale: 1.3;
+        margin-top: 5%;
+        margin-left: 48%;
     }
+    #button{
+        scale: 1.25;
+    }
+    #hobbies{
+        height: 700px;
 
+    }
+    .hobby-icon {
+  
+        scale: 1.5;
+        
+    }
+   
     .hobby-item {
-        width: 70%;
+        width: 30%;
         margin-bottom: 2%;
+        transition: width 0.3s ease-in-out;
+    }
+    #hobbies:hover .hobby-item {
+        width:55%; /* or any distance you want */
+    }
+    #pic{
+        height: 300px;
     }
 }
 
@@ -632,21 +891,32 @@ header, .section {
         height: 300px;
 
     }
-    .project {
-        flex: 0 0 100%; /* Show 1 project per row */
+    #hobbies{
+        height: 100%;
     }
+    .project {
+        flex:0 0 80%; /* Show 1 project per row */
+        margin-left: 4%;
+        overflow-x: visible;
+        
+    }
+  
+  
     #projects {
+    
         font-size: 2.7em;
     }
 
     #language-list{
-        margin-left: 14%;
+        margin-left: 22%;
         background-color: #f0f0f0;
-        width: 71%;
+        width: 55%;
         margin-bottom: 2%;
+        scale: 1.4;
     }
     .languages-container{
         margin: 10px 0; /* Add space between language skills */
+        
        
     }
     .carousel-container {
@@ -661,22 +931,24 @@ header, .section {
         padding: 5px;
     }
 
-    
+    #skills{
+        height: 1200px;
+    }
 
     .skill-bar {
         width: 70%;
     }
     .logo{
-        scale: 1;
+        scale: 1.12;
         float:right;
         height: 230px;
-        margin-right: 2%;
+        margin-right: 1%;
     }
     .logo1{
         float: left;
-        scale: 1;
+        scale: 0;
         height: 130px;
-        margin-left: 1%;
+        margin-left: 0.5%;
 
     }
     .social-logo{
@@ -688,17 +960,36 @@ header, .section {
         margin-bottom: 5%;
     }
     #cvbutton {
-        scale: 2;
+        scale: 1.8;
        
         
         font-size: 1em;
-        margin-top: 3.5%;
-        margin-left: 75%;
+        margin-top: 4%;
+        margin-left: 90%;
  
     }
 
-    .hobby-item {
-        width: 70%;
-        margin-bottom: 2%;
+    
+    #hobbies:hover {
+        background-size: 110%; /* Expand to full */
+        height: 100%;
     }
+
+    .hobby-item {
+        width: 30%;
+       
+        margin-bottom: 2%;
+        transition: width 0.6s ease-in-out;
+}
+#hobbies:hover .hobby-item {
+    width:55%; /* or any distance you want */
+}
+/* Optional: Style for hobby icons */
+.hobby-icon {
+  
+  scale: 1.5;
+  
+}
+
+
 }
