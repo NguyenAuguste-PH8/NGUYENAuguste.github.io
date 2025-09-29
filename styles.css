@@ -1,0 +1,995 @@
+body {
+    
+    font-family: 'Times New Roman', Times, serif; 
+    background-color: #f4f4f4;
+    color: #0d1b2a;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling across the body */
+}
+
+header {
+    color: #0d1b2a;
+    font-family: 'Times New Roman', Times, serif; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: #f4f4f4;
+    gap: -80px; /* Space between sections */
+    width: 100%;
+    width: 100%;
+    transform: scale(0.86); 
+    margin-bottom: 50px; /* Adds spacing below the header */
+}
+
+.header-left {
+    margin-left: -20px;
+    margin-right: 40px; 
+    display: flex;
+    flex-direction: column; /* Stack image and social links vertically */
+    align-items: center; /* Center content horizontally */
+   
+}
+
+.header-left img {
+    
+    position: relative; /* Make the position relative */
+    top: 10px; /* Moves the image 10px down */
+    left: 10px; /* Moves the image 20px to the right */
+    border-radius: 35%; /* Make the image circular */
+    margin-bottom: 10px; /* Adds some space below the image */
+    transform: scale(0); /* Start from 0 size */
+    animation: revealImg 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes revealImg {
+    to {
+        transform: scale(0.9) rotateZ(360deg); /* Reveal to original size */
+    }
+}
+@keyframes revealImg3 {
+    to {
+        transform: scale(1); /* Reveal to original size */
+    }
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack social links vertically */
+    gap: 5px; /* Space between icons */
+    align-items: center; /* Center icons horizontally */
+    transform: scale(0) translateX(-300px); /* Start from 0 size */
+    animation: revealImg1 1s ease-out forwards;
+    animation-delay: 1.3s;
+}
+
+@keyframes revealImg1 {
+    to {
+        transform: scale(1) translateX(1px) /* Reveal to original size */
+    }
+}
+
+.social-links2 {
+    display: flex;
+    flex-direction: row; /* Stack social links vertically */
+    gap: 10px; /* Space between icons */
+    align-items: center; /* Center icons horizontally */
+    justify-content: center;
+}
+
+.social-logo {
+    width: 40px; /* Icon size */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-logo:hover {
+    transform: scale(1.3); /* Slightly enlarge on hover */
+}
+
+
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 90px;
+    font-family: 'Times New Roman', Times, serif ;
+        
+}
+
+.header-right h1 {
+    margin-top: 10px;
+    font-size: 2.8em;
+    font-family: 'Slabo', serif ;
+    color: #07315e;
+    transform: scale(0); /* Start from 0 size */
+    animation: revealImg3 1s ease-out forwards;
+    animation-delay: 2.3s;
+}
+
+.header-right p0{
+    margin: 5px 0;
+    font-size: 2em;
+    color: #032159;
+    font-family: 'Slabo', serif ;
+    font-style: oblique;
+    transform: scale(0); /* Start from 0 size */
+    animation: revealImg3 1s ease-out forwards;
+    animation-delay: 2.6s;
+}
+
+.header-right p{
+    margin: 5px 0;
+    font-size: 1.3em;
+    color: #032159;
+    font-family: 'Slabo', serif ;
+    transform: scale(0) translateY(400px); /* Start from 0 size */
+    animation: revealImg4 1s ease-out forwards;
+    animation-delay: 3s;
+}
+@keyframes revealImg4 {
+    to {
+        transform: scale(1) translateY(0px); /* Reveal to original size */
+    }
+}
+.header-right h2 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #1b263b;
+    font-family: 'Times New Roman', Times, serif ;
+    cursor: default;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+header a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #1b263b;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 5px;
+    color: #778da9;
+    text-decoration: none;
+}
+
+section {
+    color: #07315e;
+    font-family: 'Times New Roman', Times, serif; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-color: #1a5592;  
+}
+
+/* Zoom-in effect on hover */
+section:hover {
+    transform: scale(1.07);  /* Zoom in */
+    box-shadow: 0px 0px 15px #1a5592;  /* Optional: Shadow for emphasis */
+    filter: drop-shadow(-5px -1px 30px #5ba5ff);  
+    
+}
+
+#pic {
+    background-color: #f4f4f4;
+    
+    object-fit: cover; /* Ensures the image covers the entire section */
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    overflow-y:  auto; /* Enables scrolling if content exceeds size */
+    margin-bottom: -20px;
+    margin-top: -18px;
+}
+#pic img {
+    
+    width: 100%;
+    height: 500px;
+    object-fit: cover; /* Ensures the image covers the entire section */
+    
+}
+ 
+button {
+    padding: 10px 15px;
+    background-image: linear-gradient(to top right, #7ad5ff, #002e84,  #7ad5ff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+   
+}
+
+.logo1 {
+    border-radius: 5%
+}
+
+/* Styling for logos to ensure they are the same size and rectangular */
+.logo {
+    width: 150px; /* Fixed width for logos */
+    height: 100px; /* Fixed height for logos */
+    object-fit: contain; /* Ensures the image keeps its aspect ratio while fitting */
+    margin-right:1.5%;
+}
+
+/* Toolbar styling for the above-header */
+.above-header {
+    display: flex;/* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Align items to the left (you can change this to center if you want) */
+    /* Optional: Add a background color to resemble a toolbar */  
+    background-image: linear-gradient(to bottom right, #0d1b2a, #1a5592, #002e84 ,#1a5592,#7ad5ff); 
+    padding: 10px 20px; /* Adds padding for better spacing */
+    color: white; /* Ensures text is visible */
+    width: 100%;
+    transform: translateY(-300px); /* Start from 0 size */
+    animation: revealImg2 1s ease-out forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes revealImg2 {
+    to {
+        transform: translateY(0); /* Reveal to original size */
+    }
+}
+
+/* Styling for the text section */
+.header-text {
+    display: flex;
+    flex-direction: column; /* Stack the text vertically */
+    justify-content: center; /* Vertically center the text */
+   
+    font-family: 'Slabo', serif ;
+
+}
+
+/* Optional: Styling for text to improve readability */
+.header-text h2 {
+    display: flex;
+    margin-top: -5px;
+    margin-bottom: -10px;
+    font-size: 3em;
+    white-space: nowrap;
+    font-family: 'Slabo', serif ;
+    text-align: center; 
+    cursor: default;
+   
+}
+
+.header-text p {
+    font-family: 'Slabo', serif ;
+    margin-bottom: -10px;
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: center; 
+    
+}
+
+.logo1 {
+    margin-left: -7%;
+    display: flex;
+    justify-content: left;
+}
+
+#cvbutton{
+    font-family: 'Times New Roman', Times, serif ;
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: -50px;
+    gap: 5px;
+    height: 4%;
+    width: 4%;
+    transform:scale(0) translateX(200px); /* Start from 0 size */
+    animation: revealImg1 1s ease-out forwards;
+    animation-delay: 1.3s;
+}
+#cvbutton:hover{
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    
+}
+
+
+#skill-list {
+    margin-top: 20px;
+}
+
+.skill-bar {
+    width: 40%;
+    height: 20px;
+    background-color: #e0e0e0; /* Background color of the bar */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.skill-progress {
+    opacity: 0;
+    width: 0; 
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: width 1.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+/* Style for the skills container */
+.skills-container {
+    text-align: center; /* Center the heading and skill list */
+    margin-bottom: 20px; /* Add some space below the skill list */
+    font-size: 24px; 
+    color: #07315e;
+}
+
+/* Style for the image container */
+.image-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    padding-top: 20px; /* Optional: Add some space above the image */
+}
+
+/* Style for the image */
+.image-container img {
+    width: 100%; /* Ensure the image fills its container */
+    max-width: 300px; /* Limit the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 5px;
+    
+}
+
+#skill-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox to align skill bars horizontally */
+    flex-direction: column; /* Stack skill bars vertically */
+    align-items: center; /* Center the bars horizontally */
+}
+
+#contact {
+    text-align: center; /* Center the heading and skill list */
+    font-size: 20px; 
+    color: #07315e;
+    margin: 0;
+    
+
+}
+.flag-icon{
+    width: 100px;
+    transform: translateX(-320px) translateY(-208px);
+   
+}
+.flag-icon1{
+    width: 200px;
+    transform: translateX(320px) translateY(-188px);
+   
+}
+
+/* Style for the languages container */
+.languages-container {
+    text-align: center; /* Center the heading and language list */
+    margin-top: 10px; /* Space above the language section */
+    font-size: 25px; 
+    color: #07315e;
+    overflow: hidden;
+    margin-bottom: -50px;
+
+   
+   }
+
+/* Style for the language list */
+#language-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox to align language skills horizontally */
+    flex-direction: column; /* Stack language skills vertically */
+    align-items: center; /* Center the items horizontally */
+    margin-bottom: 1%;
+    background-color: #f0f0f0;
+    width: 80%;
+    margin-left: 10%;
+}
+
+/* Style for each language skill */
+.language-skill {
+    margin: 10px 0; /* Add space between language skills */
+    font-size: 18px; /* Adjust font size for language skills */
+   
+}
+
+#flag-icon,
+#greetings {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#languages:hover #flag-icon,
+#languages:hover #greetings {
+  opacity: 1;
+}
+
+/* Style for the hobbies container */
+.hobbies-container {
+    text-align: center; /* Center the heading and hobby list */
+    margin-top: 30px; /* Space above the hobbies section */
+    font-size: 25px;
+    margin-bottom: 220px;
+   
+
+}
+#hobbies {
+    height: 450px;
+    background-image: url("Logos/back.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0%; /* Start at 0% */
+    transition: background-size 0.6s ease-out;
+}
+
+#hobbies.hovering-hobbies {
+    background-size: 100%;
+    height: 100%;
+}
+/* Style for the hobby list */
+#hobby-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox to align hobbies horizontally */
+    flex-wrap: wrap; /* Allow wrapping of hobby items */
+    justify-content:center; /* Center the items */
+    margin-bottom: 1%;
+    
+}
+
+/* Style for each hobby */
+.hobby-item {
+    margin: 15px 20px; /* Add space between hobby items */
+    margin-top: 15px;
+    transform: translateY(15px);
+    font-size: 18px; /* Adjust font size for hobbies */
+    text-align: center; /* Center the text for each hobby */
+    background-color: #f0f0f0; /* Optional: Add background for hobby items */
+    padding: 15px; /* Add padding around the text */
+    border-radius: 8px; /* Rounded corners for hobby items */
+    width: 185px; /* Set a width for each hobby item */
+    height: 85px;
+    transition: transform 0.6s ease-in-out;
+}
+#hobbies:hover .hobby-item {
+    transform: translateY(95px); /* or any distance you want */
+}
+
+
+
+/* Optional: Style for hobby icons */
+.hobby-icon {
+    cursor: pointer;
+    transition: transform 2.5s ease-in-out;
+    display: block;
+    background:inherit;
+    margin: 0 auto 10px; /* Center the icon and add space below it */
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px; /* Adjust the size of the icon */
+  
+}
+.hobby-icon:hover {
+    transform: translateY(15px) scaleX(3.4) scaleY(2);
+    border-radius: 20%;
+
+}
+
+header, .section {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+  header:hover, .section:hover {
+    transform: scale(0.937); /* Zooms in */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2); /* Adds shadow for emphasis */
+  }
+
+  #projects {
+    text-align: center;
+    margin-top: 20px;
+    height: 580px;
+    overflow: hidden;
+    
+}
+
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    color: #07315e;
+    cursor: default;
+}
+
+/* Style the carousel container */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    
+    margin: 0 auto;
+}
+
+/* Style the individual project items */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project {
+    flex: 0 0 33.33%; /* Display 3 items in a row */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: -100px;
+    
+}
+
+.project img {
+    width: 75%;
+    height: 70%;
+    border-radius: 8px;
+}
+.project a {
+    color: #006195; /* Change to your desired color */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+.project a:hover {
+    color: #01295e; /* Optional: Change color on hover */
+}
+
+/* Style the navigation arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #002e84;
+    color: white;
+    padding: 10px;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.arrow:hover {
+    background-color: #032159
+}
+
+.half-screen {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 90%;
+   
+    background: #fff;
+    object-fit: contain;
+    
+    border: 2px solid #00085a;
+    box-shadow: 0px 0px 100px  rgba(0,0,0,0.5);
+    backdrop-filter: blur(100px); /* Blur the background behind the image */
+  
+    
+  
+}
+
+#hobby-list, .hobby-item {
+    position: relative;
+    z-index: 1;
+  }
+
+.highlight {
+    cursor: wait;
+    background-image: linear-gradient(to bottom right, #001450,#7dd3fc, #002e84, #7dd3fc,#1e40af);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    
+
+  }
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+  }
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.site-footer {
+    text-align: center;
+    padding: 4px;
+    font-size: 0.9rem;
+    color: #888;
+    background-color: #f9f9f9;
+   
+  }
+#contact-info{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    display: flex;
+    padding: 30px;
+    background-image: linear-gradient(  #002e84 ,#7ad5ff,#7ad5ff,#1a5592); 
+
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 70%;
+    justify-content: center;
+    margin-left: 15%;
+  }
+  .form-row.full-width {
+    grid-template-columns: 1fr;
+    margin-bottom: 15px;
+  }
+  .label-title {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .asterisk {
+    color: #180091; /* or any blue you like */
+  }
+  
+  
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #f0f0f0;
+  }
+  
+input, textarea {
+    font-style: "Heretica";
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 4px;
+    resize: vertical;
+    margin-bottom: 5px;
+}
+  
+
+  
+
+/* Tablet view (768px and below) */
+@media screen and (max-width: 768px) {
+    header {
+        display: inline-block;
+        
+        flex-direction: flex;
+        text-align: left;
+        font-size: 2.8em;
+    }
+    .above-header{
+        font-size: 1.5em;
+    }
+    .header-left{
+        float:right;
+        margin-left:100%;
+    }
+    .header-content{
+        float: right;
+    }
+   
+    .header-right h1 {
+        font-size: 2.2em;
+    }
+    body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 350%;
+
+    }
+    .header-right p {
+        font-size: 1em;
+    }
+    h2{
+        font-size: 3.5em;
+             
+        
+    }
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+    #pic{
+        width: 100%;
+
+    }
+    .project {
+        flex: 0 0 78%; /* Show 1 project per row */
+    }
+    #projects {
+        margin-top: 30px;
+        font-size: 2.2em;
+        height:1500px;
+
+    }
+
+    #language-list{
+        
+        margin-left: 14%;
+        background-color: #f0f0f0;
+        width: 71%;
+        margin-bottom: 2%;
+        
+    }
+    .carousel-container {
+        width: 75%;
+        overflow: hidden;
+    }
+    
+
+    .arrow {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+
+    #skills{
+        height: 100%;
+    }
+
+    .skill-bar {
+        margin-top: 0.5%;
+        width: 70%;
+    }
+    #projects{
+        height: 1600px;
+
+    }
+   
+
+    #cvbutton {
+        scale: 1.3;
+        margin-top: 5%;
+        margin-left: 48%;
+    }
+    #button{
+        scale: 1.25;
+    }
+    #hobbies{
+        height: 700px;
+
+    }
+    .hobby-icon {
+  
+        scale: 1.5;
+        
+    }
+   
+    .hobby-item {
+        width: 30%;
+        margin-bottom: 2%;
+        transition: width 0.3s ease-in-out;
+    }
+    #hobbies:hover .hobby-item {
+        width:55%; /* or any distance you want */
+    }
+    #pic{
+        height: 300px;
+    }
+}
+
+
+/* Mobile view (480px and below) */
+@media screen and (max-width: 480px) {
+    header {
+        display: inline-block;
+        
+        flex-direction: flex;
+        text-align: left;
+        font-size: 2.5em;
+        margin-top: -5%;
+        margin-bottom: 5%;
+    }
+    .above-header{
+        font-size: 2em;
+    }
+    .above-header a{
+        font-size: 1.5em;
+    }
+    .header-left{
+        float:right;
+        margin-left:100%;
+    }
+    .header-content{
+        float: right;
+    }
+
+    .header-right h1 {
+        font-size: 2.5em;
+    }
+    body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 390%;
+        overflow-x: hidden;
+
+    }
+    .header-right p {
+        font-size: 1.5em;
+    }
+   
+    
+    h2{
+        font-size: 3.5em;
+        
+    }
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    #pic{
+        width: 100%;
+        height: 300px;
+
+    }
+    #hobbies{
+        height: 100%;
+    }
+    .project {
+        flex:0 0 80%; /* Show 1 project per row */
+        margin-left: 4%;
+        overflow-x: visible;
+        
+    }
+  
+  
+    #projects {
+    
+        font-size: 2.7em;
+    }
+
+    #language-list{
+        margin-left: 22%;
+        background-color: #f0f0f0;
+        width: 55%;
+        margin-bottom: 2%;
+        scale: 1.4;
+    }
+    .languages-container{
+        margin: 10px 0; /* Add space between language skills */
+        
+       
+    }
+    .carousel-container {
+        width: 75%;
+        overflow: hidden;
+        font-size: 1.3em;
+    }
+    
+
+    .arrow {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+
+    #skills{
+        height: 1200px;
+    }
+
+    .skill-bar {
+        width: 70%;
+    }
+    .logo{
+        scale: 1.12;
+        float:right;
+        height: 230px;
+        margin-right: 1%;
+    }
+    .logo1{
+        float: left;
+        scale: 0;
+        height: 130px;
+        margin-left: 0.5%;
+
+    }
+    .social-logo{
+        scale: 1.35;
+        
+    }
+    #button{
+        scale: 2;
+        margin-bottom: 5%;
+    }
+    #cvbutton {
+        scale: 1.8;
+       
+        
+        font-size: 1em;
+        margin-top: 4%;
+        margin-left: 90%;
+ 
+    }
+
+    
+    #hobbies:hover {
+        background-size: 110%; /* Expand to full */
+        height: 100%;
+    }
+
+    .hobby-item {
+        width: 30%;
+       
+        margin-bottom: 2%;
+        transition: width 0.6s ease-in-out;
+}
+#hobbies:hover .hobby-item {
+    width:55%; /* or any distance you want */
+}
+/* Optional: Style for hobby icons */
+.hobby-icon {
+  
+  scale: 1.5;
+  
+}
+
+
+}
