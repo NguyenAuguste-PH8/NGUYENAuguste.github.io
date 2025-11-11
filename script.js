@@ -37,14 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "HTML", value: 83 },
     { name: "CSS", value: 78 },
     { name: "Python", value: 90 },
-    { name: "Java", value: 69 },
-    { name: "Bash", value: 47 },
-    { name: "Powershell", value: 55 },
+    { name: "Java", value: 38  },
+    { name: "Bash", value: 55 },
+    { name: "Powershell", value: 53 },
     { name: "Azure", value: 40 },
-    { name: "AWS", value: 28 },
+    { name: "AWS", value: 60 },
     { name: "Microsoft365", value: 87 },
     { name: "Automation", value: 65 },
-    { name: "Docker", value: 40 }
+    { name: "Docker", value: 58 },
+    { name: "Ansible", value: 30 },
+    { name: "Kubernetes", value: 35 }
+      
+      
 ];
 
 function getColorForSkill(value) {
@@ -382,5 +386,6 @@ document.querySelector('.arrow.right').addEventListener('click', () => {
     showNextSlide();
     resetAutoSlide(); // Restart auto-slide timer
 });
+
 
 
