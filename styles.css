@@ -945,10 +945,7 @@ input, textarea {
         margin-right: 1%;
     }
     .logo1{
-        float: left;
-        scale: 0;
-        height: 130px;
-        margin-left: 0.3%;
+        display: none;
 
     }
     .social-logo{
@@ -993,4 +990,5 @@ input, textarea {
 
 
 }
+
 
