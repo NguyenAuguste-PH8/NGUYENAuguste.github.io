@@ -939,13 +939,16 @@ input, textarea {
         width: 70%;
     }
     .logo{
-        scale: 1.12;
+        scale: 0;
         float:right;
         height: 230px;
         margin-right: 1%;
     }
     .logo1{
-        display: none;
+        float: left;
+        scale: 0;
+        height: 130px;
+        margin-left: 0.5%;
 
     }
     .social-logo{
@@ -990,5 +993,6 @@ input, textarea {
 
 
 }
+
 
 
