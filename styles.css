@@ -835,8 +835,6 @@ input, textarea {
     }
 }
 
-
-/* Mobile view (480px and below) */
 @media screen and (max-width: 480px) {
     header {
         display: inline-block;
@@ -908,16 +906,37 @@ input, textarea {
     }
 
     #language-list{
+        margin-top: 4%;
         margin-left: 22%;
         background-color: #f0f0f0;
         width: 55%;
-        margin-bottom: 2%;
-        scale: 1.4;
+        margin-bottom: 4%;
+        scale: 1.78;
+        
     }
     .languages-container{
         margin: 10px 0; /* Add space between language skills */
+        scale: 1.3;
         
-       
+    }
+    
+    .flag-icon{
+    width: 100px;
+    transform: translateX(-220px) translateY(-188px);
+    scale: 1.5;
+    }
+    .flag-icon1{
+    width: 200px;
+    transform: translateX(220px) translateY(-158px);
+    scale: 1.58;
+   
+    }
+
+    .language-title {
+        font-size: 2.8em;
+        margin-top: 6%;
+        margin-bottom: 6%;
+
     }
     .carousel-container {
         width: 75%;
@@ -948,7 +967,7 @@ input, textarea {
         float: left;
         scale: 0;
         height: 130px;
-        margin-left: 0.5%;
+        margin-left: 0.1%;
 
     }
     .social-logo{
@@ -968,7 +987,7 @@ input, textarea {
         margin-left: 90%;
  
     }
-
+    
     
     #hobbies:hover {
         background-size: 110%; /* Expand to full */
@@ -977,22 +996,19 @@ input, textarea {
 
     .hobby-item {
         width: 30%;
-       
-        margin-bottom: 2%;
+        
+        margin-bottom: 3%;
         transition: width 0.6s ease-in-out;
 }
 #hobbies:hover .hobby-item {
-    width:55%; /* or any distance you want */
-}
-/* Optional: Style for hobby icons */
-.hobby-icon {
-  
-  scale: 1.5;
-  
+    width:50%; /* or any distance you want */
+    scale: 1.22;
 }
 
 
+
 }
+
 
 
 
